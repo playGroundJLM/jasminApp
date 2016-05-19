@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PlayGround</string>
+    <string name="paramTitle">SET YOUR RUN</string>
+    <string name="lengthText">KM</string>
+    <string name="altitudeText">INCLINE LEVEL</string>
+    <string name="lowAltitude">low</string>
+    <string name="medAltitude">medium</string>
+    <string name="highAltitude">high</string>
+    <string name="prefText">COMBINE WITH</string>
+
+</resources>
