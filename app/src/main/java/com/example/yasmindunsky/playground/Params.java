@@ -41,8 +41,7 @@ public class Params extends AppCompatActivity {
     private JSONObject to_server;
     private JSONObject from_server;
     private String from_server_string = null;
-    private String server_url = "http://10.0.2.2:8888/test";
-    public View gview;
+    private String server_url = "http://13.69.188.203/tracks";
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -148,7 +147,7 @@ public class Params extends AppCompatActivity {
 
         final String jsonString = "{\"dist\":" + distance + ", \"incline\":" + (incline + 1)
                 + ",\"water\":" + pref[WATER] + ",\"stairs\":" + pref[STAIRS] + ",\"facilities\":" + pref[PARKS] +
-                ",\"lat\":" + distance + ",\"long\":" + distance + "}";
+                ",\"lat\":" + 31.777000 + ",\"long\":" + 35.234555 + "}";
 
         try {
             to_server = new JSONObject(jsonString);
@@ -157,11 +156,8 @@ public class Params extends AppCompatActivity {
         }
 
         new JSONTask().execute(server_url);
-        gview = view;
 
-        while (from_server_string == null){
 
-        }
         Intent intent = new Intent(this, PreRun.class);
         intent.putExtra(EXTRA_MESSAGE, from_server_string);
         startActivity(intent);
@@ -196,7 +192,7 @@ public class Params extends AppCompatActivity {
                 connection.setDoInput(true);
                 connection.setDoOutput(true);
                 connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
-                connection.setRequestMethod("GET");
+                connection.setRequestMethod("POST");
                 connection.connect();
 
                 // Sending output

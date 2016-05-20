@@ -15,6 +15,8 @@ public class PreRun extends AppCompatActivity {
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(Params.EXTRA_MESSAGE);
+        System.out.println("IN NEXT, GOT: " + message);
+
         TextView textView = new TextView(this);
         textView.setTextSize(40);
         textView.setText(message);
