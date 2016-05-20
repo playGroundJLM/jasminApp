@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">PlayGround</string>
     <string name="paramTitle">SET YOUR RUN</string>
+    <string name="resultTitle">CHOOSE ROUTE</string>
     <string name="lengthText">KM</string>
     <string name="altitudeText">INCLINE LEVEL</string>
     <string name="lowAltitude">low</string>

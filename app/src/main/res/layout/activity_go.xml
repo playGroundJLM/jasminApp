@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackgroundColor"
+    android:orientation="vertical"
+    tools:context="com.example.yasmindunsky.playground.Params">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="5"
+        android:background="@drawable/demo_map">
+    </TableRow>
+
+
+    <TableRow
+        android:background="@color/lightBackgroundColor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1.5"
+        android:gravity="center">
+
+        <TextView
+            android:textColor="@color/redBackground"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/dist"
+            android:layout_weight="2.5"
+            android:textSize="35sp"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/inclineIndicator_1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/incline_res_3" />
+        <ImageView
+            android:id="@+id/waterIndicator_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.5"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/res_water" />
+
+        <ImageView
+            android:id="@+id/stairsIndicator_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.5"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/res_stesp" />
+
+        <ImageView
+            android:id="@+id/parksIndicator_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.5"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/res_park" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2.3">
+
+        <ImageButton
+            android:id="@+id/send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:onClick="sendData"
+            android:scaleType="fitCenter"
+            android:src="@drawable/go_button" />
+
+
+    </TableRow>
+
+</LinearLayout>
