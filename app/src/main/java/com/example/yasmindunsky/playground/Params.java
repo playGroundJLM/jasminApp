@@ -42,6 +42,7 @@ public class Params extends AppCompatActivity {
     private JSONObject from_server;
     private String from_server_string = null;
     private String server_url = "http://13.69.188.203/tracks";
+    Intent intent;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -158,9 +159,8 @@ public class Params extends AppCompatActivity {
         new JSONTask().execute(server_url);
 
 
-        Intent intent = new Intent(this, PreRun.class);
-        intent.putExtra(EXTRA_MESSAGE, from_server_string);
-        startActivity(intent);
+        intent = new Intent(this, PreRun.class);
+//        intent.putExtra(EXTRA_MESSAGE, from_server_string);
 //        new AsyncTask<Void,Void,String>(){
 //            @Override
 //            protected String doInBackground(Void... params) {
@@ -246,6 +246,9 @@ public class Params extends AppCompatActivity {
                 from_server = new JSONObject(result);
 //                JSONArray CS = from_server.getJSONArray("results");
                 from_server_string = from_server.toString();
+                intent.putExtra(EXTRA_MESSAGE, from_server_string);
+                startActivity(intent);
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }
