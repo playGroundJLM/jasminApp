@@ -6,6 +6,6 @@
     <string name="lowAltitude">low</string>
     <string name="medAltitude">medium</string>
     <string name="highAltitude">high</string>
-    <string name="prefText">COMBINE WITH</string>
+    <string name="prefTitle">COMBINE WITH</string>
 
 </resources>

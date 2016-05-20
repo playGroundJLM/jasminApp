@@ -41,7 +41,7 @@ public class Params extends AppCompatActivity {
     private JSONObject to_server;
     private JSONObject from_server;
     private String from_server_string = null;
-    private String server_url = "localhost:8888/test";
+    private String server_url = "http://10.0.2.2:8888/test";
     public View gview;
 
     /**
@@ -80,17 +80,27 @@ public class Params extends AppCompatActivity {
         ImageButton button = (ImageButton) findViewById(R.id.incline);
         switch (incline) {
             case 0: {
-                button.setImageResource(R.drawable.incline_choose_1);
+                view.setSelected(false);
+                view.setFocusable(false);
             }
 
             case 1: {
-                button.setImageResource(R.drawable.incline_choose_2);
+                view.setSelected(true);
+                view.setFocusable(false);
             }
 
             case 2: {
-                button.setImageResource(R.drawable.incline_choose_3);
+                view.setSelected(true);
+                view.setFocusable(true);
             }
         }
+        if (pref[WATER]) {
+            // water was already selected, now change state to un-select
+            pref[WATER] = false;
+        } else {
+            pref[WATER] = true;
+        }
+        view.setSelected(pref[WATER]);
     }
 
     public void waterSelection(View view) {
@@ -124,6 +134,7 @@ public class Params extends AppCompatActivity {
     }
 
     public void sendData(View view) {
+        view.setSelected(true);
         NumberPicker np = (NumberPicker) findViewById(R.id.numberPicker);
         int distance = np.getValue();
 
